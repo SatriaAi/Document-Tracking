@@ -284,6 +284,35 @@ function renderDocumentsHTML(docs: AppDocument[]) {
     return `<div class="${containerClass}">${docs.map(doc => currentView === 'grid' ? renderDocumentCard(doc) : renderDocumentListItem(doc)).join('')}</div>`;
 }
 
+"use client";
+import { useState } from "react";
+
+export default function Home() {
+  const [url, setUrl] = useState("");
+
+  async function handleUpload(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const res = await fetch("/api/upload", {
+      method: "POST",
+      body: formData,
+    });
+    const json = await res.json();
+    setUrl(json.url);
+  }
+
+  return (
+    <div>
+      <form onSubmit={handleUpload}>
+        <input type="file" name="file" />
+        <button type="submit">Upload</button>
+      </form>
+      {url && <p>File URL: <a href={url}>{url}</a></p>}
+    </div>
+  );
+}
+
+
 function getFileIcon(fileName: string) {
     const extension = fileName.split('.').pop()?.toLowerCase();
     if (['jpg', 'jpeg', 'png', 'gif', 'svg', 'webp'].includes(extension!)) return icons.image();
