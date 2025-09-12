@@ -23,7 +23,7 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: "Filename is required" });
     }
 
-    
+    const token = process.env.BLOB_READ_WRITE_TOKEN;
     const blob = await put(filename, req, {
       access: "public",
       token,
