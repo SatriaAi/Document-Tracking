@@ -191,7 +191,7 @@ function renderSidebar() {
   return `
     <aside class="sidebar">
       <div>
-        <h1 class="sidebar-header">DocTrack</h1>
+        <h1 class="sidebar-header">PT JGSM</h1>
         <div class="sidebar-section">
           <h3>Filters</h3>
           <label for="division-filter">Filter by Division</label>
@@ -210,7 +210,7 @@ function renderSidebar() {
       </div>
       <div class="sidebar-section external-links">
         <h3>External Links</h3>
-        <a href="https://oss.go.id/en">OSS</a><a href="#">HR Resources</a><a href="#">IT Helpdesk</a>
+        <a href="https://drive.google.com/drive/folders/1cKDwgey0_jt8YpDT5XsTk0uN974e25Db">Drive</a><a href="#">HR </a><a href="#">IT</a>
       </div>
     </aside>
   `;
