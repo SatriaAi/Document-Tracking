@@ -128,6 +128,16 @@ async function mockApiCreateDocument(formData: FormData): Promise<{ ok: boolean;
     }
 }
 
+const formData = new FormData();
+formData.append("file", file);
+
+await fetch(`/api/upload?filename=${file.name}`, {
+  method: "POST",
+  body: file,
+});
+
+
+
 async function mockApiDeleteDocument(docId: number): Promise<{ ok: boolean; status: number; json: () => Promise<any> }> {
     try {
         // In a real app, you would also add logic here to delete the file from Vercel Blob.
