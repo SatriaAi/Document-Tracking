@@ -57,6 +57,15 @@ async function mockApiFetchDocuments(): Promise<{ ok: boolean; status: number; j
   }
 }
 
+const formData = new FormData();
+formData.append("file", file);
+
+await fetch(`/api/upload?filename=${file.name}`, {
+  method: "POST",
+  body: file,
+});
+
+
 async function mockApiCreateDocument(formData: FormData): Promise<{ ok: boolean; status: number; json: () => Promise<any> }> {
     const file = formData.get('file') as File;
     if (!file || file.size === 0) {
