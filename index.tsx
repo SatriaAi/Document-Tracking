@@ -245,7 +245,7 @@ function renderSidebar() {
   return `
     <aside class="sidebar">
       <div>
-        <h1 class="sidebar-header">DocTrack</h1>
+        <h1 class="sidebar-header"> PT JGSM</h1>
         <div class="sidebar-section">
           <h3>Filters</h3>
           <label for="division-filter">Filter by Division</label>
