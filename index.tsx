@@ -264,7 +264,7 @@ function renderSidebar() {
       </div>
       <div class="sidebar-section external-links">
         <h3>External Links</h3>
-        <a href="https://oss.go.id/en">OSS</a><a href="#">HR Resources</a><a href="#">IT Helpdesk</a>
+        <a href="https://oss.go.id/en">OSS</a><a href="https://drive.google.com/drive/folders/1cKDwgey0_jt8YpDT5XsTk0uN974e25Db">HR Drive</a><a href="#">ITk</a>
       </div>
     </aside>
   `;
